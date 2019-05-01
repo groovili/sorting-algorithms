@@ -1,6 +1,6 @@
 package sorting_algorithms
 
-func InsertionSort(input []int, asc bool) []int {
+func Insertion(input []int, asc bool) []int {
 	for i := 1; i < len(input); i++ {
 		val := input[i]
 		prevIdx := i - 1

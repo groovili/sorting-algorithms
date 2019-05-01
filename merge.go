@@ -4,14 +4,14 @@ import (
 	"math"
 )
 
-func MergeSort(input []int, asc bool) []int {
+func Merge(input []int, asc bool) []int {
 	if len(input) <= 1 {
 		return input
 	}
 
 	middle := int(math.Floor(float64(len(input)) / 2))
-	left := MergeSort(input[:middle], asc)
-	right := MergeSort(input[middle:], asc)
+	left := Merge(input[:middle], asc)
+	right := Merge(input[middle:], asc)
 
 	return merge(left, right, asc)
 }
